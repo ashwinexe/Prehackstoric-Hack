@@ -1,7 +1,7 @@
 *{
     padding: 0;
     margin: 0;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .game{
@@ -17,10 +17,10 @@
     background-color: red;
     position: relative;
     top: 150px;
-    animation: jump 0.8s infinite;
 }
 
 .animate{
+    animation: jump 0.8s linear;
 }
 
 @keyframes jump {
@@ -47,4 +47,8 @@
 
 p{
     text-align: center;
+}
+
+#gameOverScreen{
+    display: none;
 }
