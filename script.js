@@ -34,12 +34,12 @@ var checkDead = setInterval(() => {
     if(characterTop >= 130 && obstacleLeft <= 20 && obstacleLeft >= -20)
     {
         stopScore = true; //stop incrementing score if game is over
-        obstacle.style.animation = "none";
-        gameOverScreen.style.display = "block";
-        document.getElementById("scoreSpan2").innerHTML = Math.floor(score/100);
+        obstacle.style.animation = "none"; //stop obstacles
+        gameOverScreen.style.display = "block"; //display game over screen
+        document.getElementById("scoreSpan2").innerHTML = Math.floor(score/100); //display score
         //set new highScore 
         if(score > highScore) highScore = score;
-        score = 0;
+        // score = 0;
         console.log(highScore);
         document.getElementById("highScore").innerHTML = Math.floor(highScore/100);
             
@@ -47,14 +47,28 @@ var checkDead = setInterval(() => {
     //if not touching, increment score as obstacle passes below it
     else if(stopScore == false) 
     {
-            score++; //score increments as fps (very fast) hence need to be divided by 100
-            document.getElementById("scoreSpan").innerHTML = Math.floor(score/100);
+            let displayScore = incrementScore();
+            document.getElementById("scoreSpan").innerHTML = displayScore;
     }
 
 
     }, 10);
 
-    //restart page on clicking restart button
-    function restart(){
-        document.location.reload();
+//restart page on clicking restart button
+function restart(){
+    // document.location.reload();
+    obstacle.style.animation = "obstacle 1s linear infinite";
+    score = 0; 
+    gameOverScreen.style.display = "none";
+    stopScore = false; 
+}
+
+function incrementScore() {
+    score++;
+    let displayScore = Math.floor(score/100);
+    if(displayScore  >= 3){
+        character.classList.add("level0");
     }
+
+    return displayScore;
+}
