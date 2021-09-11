@@ -2,7 +2,21 @@ var character = document.getElementById("character");
 var obstacle = document.getElementById("obstacle");
 var score = 0;
 var gameOverScreen = document.getElementById("gameOverScreen");
+
+// function moveObstacle(){
+function keyPressed(event){
+    var key = event.keyCode;
+    console.log(key);
+
+    //jumps if key is spacebar, upArrow or 'w'
+    if(key == 32 || key == 38 || key == 87){
+        jump();
+    }
+
+}
+
 function jump(){
+
     if(character.classList.contains("animate")) {return};
     character.classList.add("animate");
     setTimeout(
