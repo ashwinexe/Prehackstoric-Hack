@@ -5,8 +5,8 @@ var highScore = 0
 var stopScore = false;
 var gameOverScreen = document.getElementById("gameOverScreen");
 
-// function moveObstacle(){
-function keyPressed(event){
+// checks which key is pressed
+function whichKey(event){
     var key = event.keyCode;
 
     //jumps if key is spacebar, upArrow or 'w'
@@ -16,6 +16,7 @@ function keyPressed(event){
 
 }
 
+//makes the character jump
 function jump(){
 
     if(character.classList.contains("animate")) {return};
@@ -25,14 +26,14 @@ function jump(){
     );
 }
 
+//checks if character is touching obstacle
 var checkDead = setInterval(() => {
     let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
     let obstacleLeft = parseInt(window.getComputedStyle(obstacle).getPropertyValue("left"));
-    //if character and obstacle touches
-    // alert("Game Over");
+
     if(characterTop >= 130 && obstacleLeft <= 20 && obstacleLeft >= -20)
     {
-        stopScore = true;
+        stopScore = true; //stop incrementing score if game is over
         obstacle.style.animation = "none";
         gameOverScreen.style.display = "block";
         document.getElementById("scoreSpan2").innerHTML = Math.floor(score/100);
@@ -43,15 +44,17 @@ var checkDead = setInterval(() => {
         document.getElementById("highScore").innerHTML = Math.floor(highScore/100);
             
     }
+    //if not touching, increment score as obstacle passes below it
     else if(stopScore == false) 
     {
-            score++;
+            score++; //score increments as fps (very fast) hence need to be divided by 100
             document.getElementById("scoreSpan").innerHTML = Math.floor(score/100);
     }
 
 
     }, 10);
 
+    //restart page on clicking restart button
     function restart(){
         document.location.reload();
     }
