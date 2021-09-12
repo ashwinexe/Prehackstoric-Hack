@@ -79,6 +79,7 @@ function toggleObstacle(){
     }
 }
 
+var gameover = false
 //checks if character is touching obstacle
 var checkDead = setInterval(() => {
     let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
@@ -86,6 +87,7 @@ var checkDead = setInterval(() => {
 
     if(characterTop >= 130 && obstacleLeft <= 20 && obstacleLeft >= -20)
     {
+        gameover = true
         toggleObstacle();
         stopScore = true; //stop incrementing score if game is over
         gameOverScreen.style.display = "block"; //display game over screen
@@ -108,11 +110,12 @@ var checkDead = setInterval(() => {
     }, 10);
     var i = -1;
     const incre = () => {
-        i++;
+        if(!gameover){i++;
         header.innerText = eras[i]
         info.innerText = eraInfo[i]
         character.style.backgroundImage = `url(${chars[i]})`
         setTimeout(incre, 3000)
+        }
         }
         // setTimeout(incre, 3000)
         incre()
