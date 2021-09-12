@@ -26,6 +26,18 @@ function jump(){
     );
 }
 
+function toggleObstacle(){
+    if(obstacle.style.animation != "0s ease 0s 1 normal none running none"){
+        obstacle.style.animation = "none"; //stop obstacles
+        console.log("stopped");
+        console.log(obstacle.style.animation);
+    }
+    else{
+        obstacle.style.animation = "obstacle 1s linear infinite"; //start obstacles
+        console.log("started");
+    }
+}
+
 //checks if character is touching obstacle
 var checkDead = setInterval(() => {
     let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
@@ -33,8 +45,8 @@ var checkDead = setInterval(() => {
 
     if(characterTop >= 130 && obstacleLeft <= 20 && obstacleLeft >= -20)
     {
+        toggleObstacle();
         stopScore = true; //stop incrementing score if game is over
-        obstacle.style.animation = "none"; //stop obstacles
         gameOverScreen.style.display = "block"; //display game over screen
         document.getElementById("scoreSpan2").innerHTML = Math.floor(score/100); //display score
         //set new highScore 
@@ -57,18 +69,28 @@ var checkDead = setInterval(() => {
 //restart page on clicking restart button
 function restart(){
     // document.location.reload();
-    obstacle.style.animation = "obstacle 1s linear infinite";
+    
+    toggleObstacle();
     score = 0; 
     gameOverScreen.style.display = "none";
     stopScore = false; 
+    level0();
 }
 
 function incrementScore() {
     score++;
     let displayScore = Math.floor(score/100);
     if(displayScore  >= 3){
-        character.classList.add("level0");
+        level1();
     }
 
     return displayScore;
+}
+
+function level0(){
+    character.classList.remove("level0");
+}
+
+function level1 (){
+    character.classList.add("level0");
 }
