@@ -77,6 +77,10 @@ p{
 #gameOverScreen{
     display: none;
 }
+.gameover {
+    display: none;
+    background-image: url('./images/gameover.gif');
+}
 
 .eraInfoScreen{
     /* display: flex; */
