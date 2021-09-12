@@ -82,25 +82,38 @@ function restart(){
 function incrementScore() {
     score++;
     let displayScore = Math.floor(score/100);
-    if(displayScore  >= 3){
+    if(displayScore  >= 5){
         level1();
     }
     if(displayScore >=5){
         darkMode();
     }
 
+    if(displayScore >= 10){
+        level2();
+        lightMode();
+    }
+
+
     return displayScore;
 }
 
 function level0(){
-    character.classList.remove("level0");
+    character.classList.remove("level1");
 }
 
 function level1 (){
-    character.classList.add("level0");
+    character.classList.add("level1");
+}
+
+function level2 (){
+    character.classList.add("level2");
 }
 
 function darkMode(){
-    // body.style.backgroundColor = "black";
     body.classList.add("darkMode");
+}
+
+function lightMode(){
+    body.classList.remove("darkMode");
 }
