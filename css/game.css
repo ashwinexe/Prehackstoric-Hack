@@ -21,15 +21,13 @@
     position: relative;
     top: 150px;
 }
-
 .level0{
-    background-image: url("/images/level0/amoeba.png"); !important ; 
+    background-image: url("/images/level0/amoeba.png") !important ; 
 }
 
 .animate{
     animation: jump 0.8s linear;
 }
-
 @keyframes jump {
     0%{top: 150px;}
     30%{top: 100px;}
