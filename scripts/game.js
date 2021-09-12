@@ -1,5 +1,6 @@
 var character = document.getElementById("character");
 var obstacle = document.getElementById("obstacle");
+var body = document.getElementsByTagName("body")[0];
 var score = 0;
 var highScore = 0
 var stopScore = false;
@@ -75,6 +76,7 @@ function restart(){
     gameOverScreen.style.display = "none";
     stopScore = false; 
     level0();
+    // body.classList.remove("darkMode");
 }
 
 function incrementScore() {
@@ -82,6 +84,9 @@ function incrementScore() {
     let displayScore = Math.floor(score/100);
     if(displayScore  >= 3){
         level1();
+    }
+    if(displayScore >=5){
+        darkMode();
     }
 
     return displayScore;
@@ -93,4 +98,9 @@ function level0(){
 
 function level1 (){
     character.classList.add("level0");
+}
+
+function darkMode(){
+    // body.style.backgroundColor = "black";
+    body.classList.add("darkMode");
 }
