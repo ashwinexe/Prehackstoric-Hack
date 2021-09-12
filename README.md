@@ -14,7 +14,7 @@ We were not able to sync the character and facts to show along as they evolved a
 ## 📌 Accomplishments that we're proud of 🦕
 Finally we made something which is fun to use as a break from studies and it still provides you with knowledge.
 
-##📚 What we learned 🦕
+## 📚 What we learned 🦕
 We learned how to make games with levels, we learned to use cockroach db although we could not use it in the end.
 
 ## ⏭  What's next for No Internet 🦕
