@@ -110,6 +110,7 @@ var checkDead = setInterval(() => {
     var i = -1;
     const incre = () => {
         if(!gameover){i++;
+            console.log("sdfger")
         header.innerText = eras[i]
         info.innerText = eraInfo[i]
         character.style.backgroundImage = `url(${chars[i]})`
@@ -117,7 +118,6 @@ var checkDead = setInterval(() => {
         } else {
             document.querySelector(".gameon").style.display = 'none'
             document.querySelector(".gameover").style.display = 'block'
-
         }
         }
         // setTimeout(incre, 3000)
