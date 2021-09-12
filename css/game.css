@@ -37,7 +37,7 @@
     /* Following 2 line Added by Abhishek remove if causes issues later*/
     background-repeat: no-repeat;
     background-position: 0px;
-    background-color: red;
+    /* background-color: red; */
     position: relative;
     top: 150px;
 }
@@ -79,9 +79,14 @@ p{
 }
 
 .eraInfoScreen{
-    display: flex;
+    /* display: flex; */
     margin: auto;
     width: 800px;
-    height:100px;
+    /* height:888px; */
     border: 1px solid black;
+}
+
+.eraInfo {
+    margin-top: 11px;
+    text-align: left;
 }
