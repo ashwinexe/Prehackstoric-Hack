@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  background: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/animation-dinosaur/images/bg.jpeg) no-repeat scroll 50% 0 #2b4112;
+  background: url(/images/bg.jpeg) no-repeat scroll 50% 0 #2b4112;
 
   overflow: hidden;
 
@@ -13,27 +13,27 @@ body {
 .ag-dino-body {
   height: 483px;
   width: 1874px;
-  background: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/animation-dinosaur/images/dino.png) no-repeat -10px -10px;
+  background: url(/images/dino.png) no-repeat -10px -10px;
 }
 .ag-dino-leg-front {
   height: 607px;
   width: 318px;
-  background: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/animation-dinosaur/images/dino.png) no-repeat -10px -513px;
+  background: url(/images/dino.png) no-repeat -10px -513px;
 }
 .ag-dino-leg-back {
   height: 454px;
   width: 305px;
-  background: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/animation-dinosaur/images/dino.png) no-repeat -348px -513px;
+  background: url(/images/dino.png) no-repeat -348px -513px;
 }
 .ag-dino-mouth {
   height: 303px;
   width: 266px;
-  background: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/animation-dinosaur/images/dino.png) no-repeat -673px -513px;
+  background: url(/images/dino.png) no-repeat -673px -513px;
 }
 .ag-dino-hand {
   height: 176px;
   width: 120px;
-  background: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/animation-dinosaur/images/dino.png) no-repeat -673px -836px;
+  background: url(/images/dino.png) no-repeat -673px -836px;
 }
 
 .ag-dino-cont {
