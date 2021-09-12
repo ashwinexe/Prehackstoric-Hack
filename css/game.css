@@ -23,6 +23,9 @@
     height: 50px;
     background-image: url("/images/level0/reptile.gif");
     background-size: contain;
+    /* Following 2 line Added by Abhishek remove if causes issues later*/
+    background-repeat: no-repeat;
+    background-position: 0px;
     background-color: red;
     position: relative;
     top: 150px;
