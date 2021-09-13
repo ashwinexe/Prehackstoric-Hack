@@ -1,3 +1,4 @@
+## PLAY: http://meteors-told-dinos-come-on-and-join.us/
 ## 💡 Inspiration ![h4](https://user-images.githubusercontent.com/74637789/132989784-04d2e815-1552-4642-95c1-c03be72de800.jpg)
 🦕
 Schools always taught us history in a boring way which made everyone sleepy, right? Well we are here to change that with **No Internet**. We thought of teaching history in a fun, new way where you will know every thing from the start of life to now. You might have guessed from the name itself what inspired us the most is the dino when your internet dies. Let your internet switch off and time machine turn on!
