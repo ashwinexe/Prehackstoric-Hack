@@ -114,7 +114,7 @@ var checkDead = setInterval(() => {
         header.innerText = eras[i]
         info.innerText = eraInfo[i]
         character.style.backgroundImage = `url(${chars[i]})`
-        setTimeout(incre, 3000)
+        setTimeout(incre, 10000)
         } else {
             document.querySelector(".gameon").style.display = 'none'
             document.querySelector(".gameover").style.display = 'block'
