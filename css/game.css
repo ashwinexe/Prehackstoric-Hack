@@ -56,11 +56,11 @@
 }
 
 #obstacle{
-    background-color: blue;
-    width: 20px;
-    height: 20px;
+    
+    width: 30px;
+    height: 30px;
     position: relative;
-    top: 130px;
+    top: 120px;
     left: 500px;
     animation: obstacle 1s linear infinite;
 }
